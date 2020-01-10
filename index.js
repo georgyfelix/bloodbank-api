@@ -32,7 +32,7 @@ app.post('/api/RegisterNewUser', (req, res) => {
         email_id: req.body.email_id,
         blood_group: req.body.blood_group
     };
-    let sql = "INSERT INTO USER_MSTR (FIRST_NAME, LAST_NAME, MIDDLE_NAME, PHONE_NO, EMAIL_ID, BLOOD_GROUP) VALUES('" + data.first_name + "','" + data.last_name + "','" + data.middle_name + "','" + data.phone_no + "','" + data.email_id + "', '" + data.blood_group +"')";
+    let sql = "INSERT INTO USER_MSTR (FIRST_NAME, LAST_NAME, MIDDLE_NAME, PHONE_NO, EMAIL_ID) VALUES('" + data.first_name + "','" + data.last_name + "','" + data.middle_name + "','" + data.phone_no + "','" + data.email_id + "')";
     let query = conn.query(sql, data, (err, results) => {
         if (err) throw err;
         res.send(JSON.stringify({ "status": 200, "error": null, "response": results }));
