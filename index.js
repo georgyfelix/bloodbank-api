@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const mysql = require('mysql');
+const PORT = process.env.PORT || 5000
 
 // parse application/json
 app.use(bodyParser.json());
@@ -20,13 +21,7 @@ conn.connect((err) => {
     console.log('Mysql Connected...');
 });
 
-var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
-var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
-
-var server = app.listen(process.env.PORT, function () {
-    console.log("Listening on " + server_ip_address + ", port " + server_port);
-    console.log(console.log(server.address().address))
-});
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 app.post('/api/RegisterNewUser', (req, res) => {
     let data = { 
