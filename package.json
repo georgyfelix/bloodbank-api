@@ -1,0 +1,27 @@
+{
+  "name": "bloodbank_rest",
+  "version": "1.0.0",
+  "description": "RESTFUL API for Blood Bank Application for KCYM Thoppumpady",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georgyfelix/bloodbank-api.git"
+  },
+  "keywords": [
+    "bloodbank"
+  ],
+  "author": "Georgy Felix",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/georgyfelix/bloodbank-api/issues"
+  },
+  "homepage": "https://github.com/georgyfelix/bloodbank-api#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mysql": "^2.17.1"
+  }
+}
