@@ -23,7 +23,7 @@ conn.connect((err) => {
 var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
 var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
 
-var server = .listen(process.env.PORT, function () {
+var server = app.listen(process.env.PORT, function () {
     console.log("Listening on " + server_ip_address + ", port " + server_port);
     console.log(console.log(server.address().address))
 });
